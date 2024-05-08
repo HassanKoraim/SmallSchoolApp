@@ -1,0 +1,13 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Student Details";
+}
+
+<div class="card" style="width:400px">
+  <img class="card-img-top" src="~/@Model.getImg()" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">@Model.getFullName()</h4>
+    <p class="card-text">The ClassRoom : @Model.getClassRoom()<br />The GPA: @Model.getGpa()</p>
+    <a href="#" class="btn btn-primary">See Profile</a>
+  </div>
+</div>

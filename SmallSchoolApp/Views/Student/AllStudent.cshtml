@@ -1,0 +1,18 @@
+﻿
+@using SmallSchoolApp.Models;
+@model List<Student>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "All Student in Class Room: " + ViewBag.classRoom;
+
+}
+
+        <div class="list-group">
+    @foreach (Student student in Model)
+    {
+        <a href="~/StudentDetails/@student.getId()" class="list-group-item list-group-item-action">@student.getFullName()</a>
+
+    }
+        </div>
+
+
